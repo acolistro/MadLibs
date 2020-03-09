@@ -11,8 +11,20 @@ namespace Madlibs.Controllers
     [Route("/")]
     public ActionResult MadLib() { 
         MadLibVariable myMadLibVariable = new MadLibVariable();
-        myMadLibVariable.Recipient = "Lina";
-        myMadLibVariable.Sender = "Jasmine";
+        myMadLibVariable.Color = color;
+        myMadLibVariable.Color2 = color2;
+        myMadLibVariable.Adjective = adjective;
+        myMadLibVariable.Animals = animals;
+        myMadLibVariable.Adjective2 = adjective2;
+        myMadLibVariable.Animals2 = animals2;
+        myMadLibVariable.Animals3 = animals3;
+        myMadLibVariable.Color3 = color3;
+        myMadLibVariable.Noun = noun;
+        myMadLibVariable.Color4 = color4;
+        myMadLibVariable.Adjective3 = adjective3;
+        myMadLibVariable.Color5 = color5;
+        myMadLibVariable.Verb2 = verb2;
+        myMadLibVariable.Adjective4 = adjective4;
         return View(myMadLibVariable);
     }
     [Route("/springmlform")]
