@@ -23,21 +23,20 @@ namespace FriendLetter
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app)
-        {
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                  name: "default",
-                  template: "{controller=Home}/{action=Index}/{id?}");
-            });
+    public void Configure(IApplicationBuilder app)
+    {
+      app.UseDeveloperExceptionPage();
+      app.UseMvc(routes =>
+      {
+        routes.MapRoute(
+            name: "MadLibs",
+            template: "{controller=Home}/{action=Index}/{id?}");
+      });
+      app.Run(async (context) =>
+      {
+        await context.Response.WriteAsync("MadLibs");
+      });
 
-            app.Run(async (context) =>
-            {
-              await context.Response.WriteAsync("Hello World!");
-            });
-
-            // app.UseDeveloperExceptPage();
         }
     }
 }
