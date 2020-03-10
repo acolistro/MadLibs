@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  font-family: 'Bellota', cursive;
+  background-image: url("https://www.publicdomainpictures.net/pictures/250000/velka/springtime-flower-show-24.jpg");
+}
+
+.jumbotron {
+  margin-top: 48px;
+}
+
+p {
+  font-size: 25px;
+}
+
+a {
+  font-size: 25px;
+  font-weight: bolder;
+  text-decoration-color: maroon;
+}
