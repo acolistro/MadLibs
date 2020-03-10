@@ -1,6 +1,6 @@
 namespace MadLibs.Models
 {
-    public class MadLibVariable
+    public class MadLibVariableFacts
     {
         public string Number { get; set; }
         public string Adjective { get; set; }

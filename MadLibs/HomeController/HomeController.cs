@@ -20,6 +20,21 @@ namespace Madlibs.Controllers
     public ActionResult SpringMLFactsForm() {
     return View(); }
 
+    [Route("/factsstory")]
+    public ActionResult factsStory(string number, string adjective, string noun, string noun2, string adjective2, string adjective3, string animals, string animals2, string noun3, string verb) {
+      MadLibVariableFacts myMadLibVariableFacts = new MadLibVariableFacts();
+      myMadLibVariableFacts.Number = number;
+      myMadLibVariableFacts.Adjective = adjective;
+      myMadLibVariableFacts.Noun = noun;
+      myMadLibVariableFacts.Noun2 = noun2;
+      myMadLibVariableFacts.Adjective2 = adjective2;
+      myMadLibVariableFacts.Adjective3 = adjective3;
+      myMadLibVariableFacts.Animals = animals;
+      myMadLibVariableFacts.Animals2 = animals2;
+      myMadLibVariableFacts.Verb = verb;
+      return View(myMadLibVariableFacts);
+    }
+
     [Route("/gardenstory")]
     public ActionResult GardenStory(string noun, string adjective, string noun2, string noun3, string noun4, string noun5, string noun6, string tool, string noun7, string adjective2) { 
         MadLibVariableGarden myMadLibVariableGarden = new MadLibVariableGarden();
