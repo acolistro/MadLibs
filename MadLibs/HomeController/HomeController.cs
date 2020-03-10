@@ -5,9 +5,10 @@ namespace Madlibs.Controllers
 {
   public class HomeController : Controller
   {
-    public string Hello() { return "Hello friend!"; }
-
-    public string Goodbye() { return "Goodbye friend."; }
+    [Route("/")]
+    public ActionResult HomeForm() {
+    return View();
+    }
     [Route("/gardenstory")]
     public ActionResult GardenStory(string noun, string adjective, string noun2, string noun3, string noun4, string noun5, string noun6, string tool, string noun7, string adjective2) { 
         MadLibVariableGarden myMadLibVariableGarden = new MadLibVariableGarden();
@@ -23,10 +24,6 @@ namespace Madlibs.Controllers
         myMadLibVariableGarden.Adjective2 = adjective2;
         return View(myMadLibVariableGarden);
     }
-    [Route("/springmlform")]
-    public ActionResult SpringMLForm() { return View(); }
-    [Route("/springmlgardenform")]
-    public ActionResult SpringMLGardenForm() { return View(); }
     [Route("/story")]
     public ActionResult Story(string color, string color2, string adjective, string animals, string adjective2, string animals2, string animals3, string color3, string noun, string color4, string adjective3, string color5, string verb2, string adjective4)
     {
