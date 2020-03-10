@@ -25,6 +25,8 @@ namespace Madlibs.Controllers
     }
     [Route("/springmlform")]
     public ActionResult SpringMLForm() { return View(); }
+    [Route("/springmlgardenform")]
+    public ActionResult SpringMLGardenForm() { return View(); }
     [Route("/story")]
     public ActionResult Story(string color, string color2, string adjective, string animals, string adjective2, string animals2, string animals3, string color3, string noun, string color4, string adjective3, string color5, string verb2, string adjective4)
     {
