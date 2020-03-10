@@ -8,25 +8,20 @@ namespace Madlibs.Controllers
     public string Hello() { return "Hello friend!"; }
 
     public string Goodbye() { return "Goodbye friend."; }
-    // [Route("/")]
-    // public ActionResult MadLib() { 
-    //     MadLibVariable myMadLibVariable = new MadLibVariable();
-    //     myMadLibVariable.Color = color;
-    //     myMadLibVariable.Color2 = color2;
-    //     myMadLibVariable.Adjective = adjective;
-    //     myMadLibVariable.Animals = animals;
-    //     myMadLibVariable.Adjective2 = adjective2;
-    //     myMadLibVariable.Animals2 = animals2;
-    //     myMadLibVariable.Animals3 = animals3;
-    //     myMadLibVariable.Color3 = color3;
-    //     myMadLibVariable.Noun = noun;
-    //     myMadLibVariable.Color4 = color4;
-    //     myMadLibVariable.Adjective3 = adjective3;
-    //     myMadLibVariable.Color5 = color5;
-    //     myMadLibVariable.Verb2 = verb2;
-    //     myMadLibVariable.Adjective4 = adjective4;
-    //     return View(myMadLibVariable);
-    // }
+    [Route("/gardenstory")]
+    public ActionResult GardenStory(string noun, string adjective, string noun2, string noun3, string noun4, string noun5, string tool, string noun6, string adjective2) { 
+        MadLibVariableGarden myMadLibVariableGarden = new MadLibVariableGarden();
+        myMadLibVariableGarden.Noun = noun;
+        myMadLibVariableGarden.Adjective = adjective;
+        myMadLibVariableGarden.Noun2 = noun2;
+        myMadLibVariableGarden.Noun3 = noun3;
+        myMadLibVariableGarden.Noun4 = noun4;
+        myMadLibVariableGarden.Noun5 = noun5;
+        myMadLibVariableGarden.Tool = tool;
+        myMadLibVariableGarden.Noun6 = noun6;
+        myMadLibVariableGarden.Adjective2 = adjective2;
+        return View(myMadLibVariableGarden);
+    }
     [Route("/springmlform")]
     public ActionResult SpringMLForm() { return View(); }
     [Route("/story")]
