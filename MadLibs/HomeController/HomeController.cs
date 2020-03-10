@@ -9,12 +9,16 @@ namespace Madlibs.Controllers
     public ActionResult HomeForm() {
     return View();
     }
-    
+
     [Route("/springmlform")]
     public ActionResult SpringMLForm() {    return View(); }
 
     [Route("/springmlgardenform")]
     public ActionResult SpringMLGardenForm() { return View(); }
+
+    [Route("/springmlfactsform")]
+    public ActionResult SpringMLFactsForm() {
+    return View(); }
 
     [Route("/gardenstory")]
     public ActionResult GardenStory(string noun, string adjective, string noun2, string noun3, string noun4, string noun5, string noun6, string tool, string noun7, string adjective2) { 
