@@ -9,7 +9,7 @@ namespace Madlibs.Controllers
 
     public string Goodbye() { return "Goodbye friend."; }
     [Route("/gardenstory")]
-    public ActionResult GardenStory(string noun, string adjective, string noun2, string noun3, string noun4, string noun5, string tool, string noun6, string adjective2) { 
+    public ActionResult GardenStory(string noun, string adjective, string noun2, string noun3, string noun4, string noun5, string noun6, string tool, string noun7, string adjective2) { 
         MadLibVariableGarden myMadLibVariableGarden = new MadLibVariableGarden();
         myMadLibVariableGarden.Noun = noun;
         myMadLibVariableGarden.Adjective = adjective;
@@ -17,8 +17,9 @@ namespace Madlibs.Controllers
         myMadLibVariableGarden.Noun3 = noun3;
         myMadLibVariableGarden.Noun4 = noun4;
         myMadLibVariableGarden.Noun5 = noun5;
-        myMadLibVariableGarden.Tool = tool;
         myMadLibVariableGarden.Noun6 = noun6;
+        myMadLibVariableGarden.Tool = tool;
+        myMadLibVariableGarden.Noun7 = noun7;
         myMadLibVariableGarden.Adjective2 = adjective2;
         return View(myMadLibVariableGarden);
     }
