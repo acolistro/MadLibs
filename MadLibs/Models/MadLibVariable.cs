@@ -11,6 +11,7 @@ namespace MadLibs.Models
         public string Animals3 { get; set; }
         public string Color3 { get; set; }
         public string Noun { get; set; }
+        public string Verb { get; set; }
         public string Color4 { get; set; }
         public string Adjective3 { get; set; }
         public string Color5 { get; set; }
